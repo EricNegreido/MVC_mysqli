@@ -6,14 +6,14 @@
 
     public function __construct(){
       require_once("conexion.php");
-      $this->db = Connect::connection();
+      $this->db = new Connect;
       $this->persons=array();
     }
 
     public function get_persons(){
-      $sql = $this->db->mysql_query("SELECT * FROM datos_usuarios");
-      while($row = mysql_fetch_assoc($sql)){
-        $this->persons[]= $filas;
+      $sql = mysqli_query($this->db->connection(),"SELECT * FROM datos_usuarios");
+      while($row = mysqli_fetch_assoc($sql)){
+        $this->persons[]= $row;
       }
     return $this->persons;
 

@@ -8,11 +8,11 @@
         $user = "root";
         $pass = "";
         $connection = mysqli_connect($host, $user, $pass, $db);
-        mysql_set_charset("utf8", $connection);
+        mysqli_set_charset($connection, "utf8");
 
         
       } catch (Throwable $th) {
-        die("ERROR " . mysql_errno($connection) . ":". mysql_error($connection) . "\n");
+        die("ERROR " . mysqli_errno($connection) . ":". mysqli_error($connection) . "\n");
       }
       return $connection;
     }
