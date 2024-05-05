@@ -4,6 +4,7 @@
 $persons = new Persons_model();
 
 $matriz_persons= $persons->get_persons();
+require_once("models/pagination.php");
 require_once("views/persons_views.php");
 
 
