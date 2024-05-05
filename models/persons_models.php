@@ -5,7 +5,7 @@
     private $persons;
 
     public function __construct(){
-      require_once("conexion.php");
+      require_once("models/conexion.php");
       $this->db = new Connect;
       $this->persons=array();
     }
