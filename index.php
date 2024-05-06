@@ -8,9 +8,8 @@
 <body>
   <h1> MVC </h1>
 
-  <?php 
-  
-  require_once("controllers/persons_controllers.php");
+  <?php
+    require_once("controllers/persons_controllers.php");
   ?>
 </body>
 </html>
